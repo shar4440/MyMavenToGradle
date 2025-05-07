@@ -10,18 +10,6 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo '🔄 Cloning GitHub repository...'
-                git branch: 'master', url: 'pipeline {
-    agent any
-
-    tools {
-        gradle 'Gradle'  // Jenkins-installed Gradle (configure this in Jenkins global tools)
-        jdk 'JDK'        // Jenkins-installed JDK
-    }
-
-    stages {
-        stage('Checkout') {
-            steps {
-                echo '🔄 Cloning GitHub repository...'
                 git branch: 'master', url: 'https://github.com/shar4440/MyMavenToGradle.git'
             }
         }
